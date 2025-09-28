@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Matches Carousel</title>
+<style>
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; background:#f4f4f4; padding:18px}
+
+  .carousel {
+    display:flex;
+    gap:16px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;     /* enable snapping */
+    -webkit-overflow-scrolling:touch; /* smooth on iOS */
+    scroll-behavior:smooth;
+    padding:12px;
+    user-select:none;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    touch-action: pan-y;              /* allow vertical page scroll */
+  }
+  .carousel::-webkit-scrollbar{ display:none }
+
+  .card {
+    flex:0 0 calc(33.333% - 10.666px);
+    scroll-snap-align:start;
+    background:#fff;
+    border-radius:10px;
+    padding:18px;
+    box-shadow:0 6px 18px rgba(10,20,30,.06);
+    text-align:center;
+  }
+
+  .teams {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+  }
+  .team { flex:1; display:flex; flex-direction:column; align-items:center; }
+  .team img { width:42px; height:42px; margin-bottom:6px; }
+  .score { font-size:1.4rem; font-weight:700; margin:0 8px; }
+  .info { font-size:.85rem; color:#555; }
+
+  @media (max-width:900px){
+    .card { flex:0 0 calc(50% - 8px); }
+  }
+  @media (max-width:480px){
+    .card { flex:0 0 calc(100% - 16px); }
+  }
+</style>
+</head>
+<body>
+
+<div class="carousel">
+  <div class="card">
+    <div class="teams">
+      <div class="team"><img src="https://via.placeholder.com/42"><span>USMO</span></div>
+      <div class="score">2 - 1</div>
+      <div class="team"><img src="https://via.placeholder.com/42"><span>RSB</span></div>
+    </div>
+    <div class="info">Botola 2 • 25 Sep 2025 • 18:00</div>
+  </div>
+
+  <div class="card">
+    <div class="teams">
+      <div class="team"><img src="https://via.placeholder.com/42"><span>WAC</span></div>
+      <div class="score">vs</div>
+      <div class="team"><img src="https://via.placeholder.com/42"><span>USMO</span></div>
+    </div>
+    <div class="info">Throne Cup • 30 Sep 2025 • 20:30</div>
+  </div>
+
+  <div class="card">
+    <div class="teams">
+      <div class="team"><img src="https://via.placeholder.com/42"><span>USMO</span></div>
+      <div class="score">0 - 0</div>
+      <div class="team"><img src="https://via.placeholder.com/42"><span>KAC</span></div>
+    </div>
+    <div class="info">Botola 2 • 18 Sep 2025</div>
+  </div>
+</div>
+
+</body>
+</html>
