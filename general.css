@@ -1,0 +1,486 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+.img-container {
+  position: relative;
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: black; 
+  border-radius: 0 0 10px 10px;
+
+}
+
+.img-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* how much you want faded*/ 
+  background: linear-gradient(to bottom, transparent, rgb(0, 0, 0)); /* or match page bg*/ 
+  border-radius: 0 0 10px 10px;
+}
+.tm-img{
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  border-radius: 0 0 20px 20px;
+}
+
+
+.title{
+    font-weight: 550;
+    font-size: 22px;
+    border-radius: 14px;
+    width: 500px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 5px 0 5px;
+
+}
+.title2{
+    font-weight: bold;
+    color: white;
+    font-size: 2.2rem;
+    z-index: 1;
+    position: absolute;
+    top: 90%;
+    left:22%;
+
+}
+ @media (max-width: 1024px) {
+    .img-container {
+     width: 100%;
+     height: 500px; 
+     border-radius: 0;
+    }
+    
+    .tm-img{
+     width: 100%;
+     height: 500px;
+     border-radius: 0;
+    }
+    .img-container::after {
+     border-radius: 0;
+    }
+
+    .title {
+      font-size: 24px; /* smaller for tablets/phones */
+    }
+    .title2 {
+      font-size: 2rem; /* smaller for tablets/phones */
+      left: 20%;
+  }}
+
+ @media (max-width: 906px) {
+
+     .img-container {
+    width: 100%;
+    height: 450px; 
+    border-radius: 0;
+
+}
+    .tm-img{
+  width: 100%;
+  height: 450px;
+  border-radius: 0;
+}
+.img-container::after {
+  
+  border-radius: 0;
+}
+    .title {
+      font-size: 18px; /* smaller for tablets/phones */
+      width: 390px;
+    }
+    .title2 {
+      font-size: 2rem; /* smaller for tablets/phones */
+      left: 15%;
+  }}
+
+ @media (max-width: 768px) {
+    .img-container {
+     width: 100%;
+     height: 450px; 
+     border-radius: 0;
+    }
+    .tm-img{
+     width: 100%;
+     height: 450px;
+     border-radius: 0;
+    }
+    .img-container::after {
+     border-radius: 0;
+    }
+    .title {
+     font-size: 1.2rem; /* smaller for tablets/phones */
+     width: 400px;
+    }
+    
+    .title2 {
+      font-size: 1.8rem; /* smaller for tablets/phones */
+      left: 12%;
+  }
+ }
+  @media (max-width: 480px) {
+    .img-container {
+     width: 100%;
+     height: 250px; 
+     border-radius: 0;
+    }
+    .tm-img{
+     width: 100%;
+     height: 250px;
+     border-radius: 0;
+    }
+    .img-container::after {
+     border-radius: 0;
+    }
+    .title {
+      width: 70%;
+      font-size: 0.8rem; /* smallest for very small screens */
+    }
+     .title2 {
+      font-size: 1rem; /* smallest for very small screens */
+      left:10%;
+    }
+  }
+
+
+
+
+
+
+.matches{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+.cards-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.h2{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Sekuya', sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  width: 570px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 40px;
+  color: white;
+}
+.teams{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.team1 img,
+.team2 img {
+  width: 80px;
+  height: 80px;
+}
+
+.highlights-link a{
+  color: white;
+  
+}
+
+.page-link a{
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 14px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.page-link a:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid black;
+}
+
+@media (max-width: 480px) {
+  .cards-wrapper{
+   flex-direction: column;
+  }
+  .card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  width: 320px;
+  height: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 20px;
+  color: white;
+
+  }
+  .teams{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+}
+
+/*
+
+*/
+
+.standings {
+  width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.standings h2 {
+  font-family: 'Sekuya', sans-serif;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.table {
+  width: 100%;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 2fr repeat(8, 1fr);
+  align-items: center;
+  padding: 15px 10px;
+}
+
+.table-header {
+  color: #999;
+  font-weight: bold;
+}
+
+.table-row {
+  background: #f2f2f2;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.table-row.active {
+  background: #141414;
+  color: white;
+}
+
+.table-row .team {
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-header .team {
+  text-align: left;
+}
+
+.full-btn {
+  margin-top: 25px;
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.full-btn:hover {
+  background: #888888;
+}
+
+@media (max-width: 480px) {
+  .table-header span:nth-child(4), /* W */
+.table-header span:nth-child(5), /* D */
+.table-header span:nth-child(6), /* L */
+.table-header span:nth-child(7), /* GF */
+.table-header span:nth-child(8)  /* GA */
+{
+  display: none;
+}
+  .table-row span:nth-child(4), /* W */
+.table-row span:nth-child(5), /* D */
+.table-row span:nth-child(6), /* L */
+.table-row span:nth-child(7), /* GF */
+.table-row span:nth-child(8)  /* GA */
+{
+  display: none;
+}
+
+.standings {
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.table-row {
+  border-radius: 0;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 2fr repeat(4, 1fr);  
+  align-items: center;
+  padding: 15px 10px;
+  
+}
+}
+
+/*
+
+*/
+/* SECTION */
+.squad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.squad h2 {
+  font-size: 22px;
+  font-family: 'Sekuya', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* WRAPPER */
+.players-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* PLAYER CARD */
+.player-card {
+  background: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+
+  flex: 1 1 calc(25% - 15px); /* desktop = 4 */
+  max-width: calc(50% - 15px);
+
+  height: 400px;
+}
+
+/* IMAGE */
+.player-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 💻 Laptop → 3 */
+@media (max-width: 1024px) {
+  .player-card {
+    flex: 1 1 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
+  }
+}
+
+/* 📲 Tablet → 2 */
+@media (max-width: 768px) {
+  .player-card {
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+}
+
+/* 📱 Phone → STILL 2 (no 1 card!) */
+@media (max-width: 480px) {
+  .player-card {
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(80% - 15px);
+    height: 220px; /* smaller height for phones */
+  }
+}
+
+/* BUTTON */
+.page-link {
+  margin-top: 20px;
+}
+
+.page-link a {
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+/*
+
+
+*/
+
+.history{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.history h2{
+  font-family: 'Sekuya', sans-serif;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.history p{
+  font-family: serif;
+  max-width: 1200px;
+  line-height: 1.6;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .history{
+    width: 90%;
+    padding: 15px;
+  }
+  .history p {
+    font-size: 1rem;
+  }
+}
