@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USMO Footer</title>
+
+<style>
+body {
+  margin: 0;
+  background-color: #111;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to top, #000, #111);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* Players container */
+.players-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Sections */
+.keepers,
+.defenders,
+.center,
+.forwards {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titles */
+.players-container h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+/* Players */
+.players-container p {
+  margin: 4px 0;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover */
+.players-container p:hover {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Logo */
+.ft-logo img {
+  margin-top: 30px;
+  width: 140px;
+  transition: transform 0.3s ease;
+}
+
+.ft-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Club name */
+.ft-title {
+  margin-top: 10px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .players-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .players-container h2 {
+    font-size: 16px;
+  }
+
+  .players-container p {
+    font-size: 13px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<footer>
+  <div class="players-container">
+    
+    <div class="keepers">
+      <h2>Goalkeepers</h2>
+      <p>Amghar</p>
+      <p>Kaaouchi</p>
+    </div>
+
+    <div class="defenders">
+      <h2>Defenders</h2>
+      <p>Martile</p>
+      <p>Yassine Bouaali</p>
+      <p>Touihine</p>
+      <p>Ialioune</p>
+      <p>Nafai</p>
+      <p>Aklidou</p>
+      <p>Younes Douib</p>
+      <p>Maldini</p>
+    </div>
+
+    <div class="center">
+      <h2>Midfielders</h2>
+      <p>Hammouch</p>
+      <p>Zouhir Jbilo</p>
+      <p>Hamza Elbaroudi</p>
+      <p>Said Azeroual</p>
+      <p>Oussama Dahr</p>
+    </div>
+
+    <div class="forwards">
+      <h2>Forwards</h2>
+      <p>Badr Mahdoub</p>
+      <p>Elmouatassim Billah</p>
+      <p>Taha Dayf</p>
+      <p>Yassin Marzougi</p>
+      <p>Oussama Sghiri</p>
+      <p>Hamza Qarqor</p>
+    </div>
+
+  </div>
+
+  <div class="ft-logo">
+    <img src="USMO IMG/logo/cropped_circle_image.png" alt="USMO Logo">
+  </div>
+
+  <div class="ft-title">
+    UNION SPORTIVE MUSULMANE OUJDA
+  </div>
+
+</footer>
+
+</body>
+</html>
