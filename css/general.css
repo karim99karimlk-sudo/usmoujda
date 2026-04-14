@@ -4,7 +4,10 @@ body{
   font-family: 'Poppins', sans-serif;
 
 }
-
+a{
+  text-decoration: none;
+  color: white;
+}
 
 .img-container {
   position: relative;
@@ -483,4 +486,18 @@ body{
   .history p {
     font-size: 1rem;
   }
+}
+
+.full-link{
+  display: inline-block;
+  margin-top: 20px;
+  background: #000000;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.full-link:hover {
+  background: #888888;
 }

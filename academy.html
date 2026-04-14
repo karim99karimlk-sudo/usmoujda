@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academy</title>
+
+  <link rel="shortcut icon" href="USMO IMG/logo/cropped_circle_image.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/academy.css">
+</head>
+<body>
+  <header>
+  <div class="logo">
+   <a href="index.html">UNION</a>
+  </div>
+
+  <nav id="nav">
+    <i class="fa-solid fa-xmark close-menu" id="close-menu"></i>
+    <ul>
+      <li><a class="hover-underline" href="academy.html">Academy</a></li>
+      <li><a class="hover-underline" href="history.html">History</a></li>
+      <li><a class="hover-underline" href="team.html">Team</a></li>
+      <li><a class="hover-underline" href="schedule.html">Schedule</a></li>
+      <li><a class="hover-underline" href="#">Standings</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-icons">
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+    <!-- 🌍 Language -->
+    <div class="lang-container" id="lang-btn">
+      <div class="lang-icon">
+        <img src="USMO IMG/Icons/language-solid.svg" alt="">
+      </div>
+
+      <div class="lang-dropdown" id="lang-menu">
+        <a href="#">English</a>
+        <a href="#">العربية</a>
+        <a href="#">Français</a>
+      </div>
+    </div>
+
+    <!-- ☰ Menu -->
+    <i class="fa-solid fa-bars" id="menu-toggle"></i>
+    
+  </div>
+  </header>
+  <main>
+    <section class="hero">
+      <video src="WhatsApp Video 2026-04-13 at 14.42.41.mp4" autoplay muted loop></video>
+    </section>
+  </main>
+ <script>
+  
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav");
+
+  const langBtn = document.getElementById("lang-btn");
+  const langMenu = document.getElementById("lang-menu");
+
+  // ☰ MENU CLICK
+  menuToggle.onclick = (e) => {
+    e.stopPropagation();
+    nav.classList.toggle("active");
+  };
+
+  // 🌍 LANGUAGE CLICK
+  langBtn.onclick = (e) => {
+    e.stopPropagation();
+    langMenu.classList.toggle("active");
+  };
+
+  // CLICK OUTSIDE CLOSES EVERYTHING
+  document.onclick = () => {
+    nav.classList.remove("active");
+    langMenu.classList.remove("active");
+  };
+
+
+
+  const closeMenu = document.getElementById("close-menu");
+
+// OPEN
+menuToggle.onclick = (e) => {
+  e.stopPropagation();
+  nav.classList.add("active");
+  langMenu.classList.remove("active");
+};
+
+// CLOSE with X
+closeMenu.onclick = (e) => {
+  e.stopPropagation();
+  nav.classList.remove("active");
+};
+
+// LANGUAGE
+langBtn.onclick = (e) => {
+  e.stopPropagation();
+  langMenu.classList.toggle("active");
+  nav.classList.remove("active");
+};
+
+// CLICK OUTSIDE
+document.onclick = (e) => {
+  if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+    nav.classList.remove("active");
+  }
+
+  if (!langBtn.contains(e.target)) {
+    langMenu.classList.remove("active");
+  }
+};
+  </script>
+</body>
+</html>

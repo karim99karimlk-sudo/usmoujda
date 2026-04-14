@@ -1,0 +1,269 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+  .img-container {
+  position: relative;
+  width: 1250px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: black; 
+  border-radius: 0 0 10px 10px;
+
+}
+
+.img-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* how much you want faded*/ 
+  background: linear-gradient(to bottom, transparent, rgb(0, 0, 0)); /* or match page bg*/ 
+  border-radius: 0 0 10px 10px;
+}
+.tm-img{
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  border-radius: 0 0 20px 20px;
+}
+
+
+.title{
+    font-weight: 550;
+    font-size: 22px;
+    border-radius: 14px;
+    width: 500px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 5px 0 5px;
+
+}
+.title2{
+    font-weight: bold;
+    color: white;
+    font-size: 2.2rem;
+    z-index: 1;
+    position: absolute;
+    top: 90%;
+    left:22%;
+
+}
+ @media (max-width: 1024px) {
+    .img-container {
+     width: 100%;
+     height: 500px; 
+     border-radius: 0;
+    }
+    
+    .tm-img{
+     width: 100%;
+     height: 500px;
+     border-radius: 0;
+    }
+    .img-container::after {
+     border-radius: 0;
+    }
+
+    .title {
+      font-size: 24px; /* smaller for tablets/phones */
+    }
+    .title2 {
+      font-size: 2rem; /* smaller for tablets/phones */
+      left: 20%;
+  }}
+
+ @media (max-width: 906px) {
+
+     .img-container {
+    width: 100%;
+    height: 450px; 
+    border-radius: 0;
+
+}
+    .tm-img{
+  width: 100%;
+  height: 450px;
+  border-radius: 0;
+}
+.img-container::after {
+  
+  border-radius: 0;
+}
+    .title {
+      font-size: 18px; /* smaller for tablets/phones */
+      width: 390px;
+    }
+    .title2 {
+      font-size: 2rem; /* smaller for tablets/phones */
+      left: 15%;
+  }}
+
+ @media (max-width: 768px) {
+    .img-container {
+     width: 100%;
+     height: 450px; 
+     border-radius: 0;
+    }
+    .tm-img{
+     width: 100%;
+     height: 450px;
+     border-radius: 0;
+    }
+    .img-container::after {
+     border-radius: 0;
+    }
+    .title {
+     font-size: 1.2rem; /* smaller for tablets/phones */
+     width: 400px;
+    }
+    
+    .title2 {
+      font-size: 1.8rem; /* smaller for tablets/phones */
+      left: 12%;
+  }
+ }
+  @media (max-width: 480px) {
+    .img-container {
+     width: 100%;
+     height: 250px; 
+     border-radius: 0;
+    }
+    .tm-img{
+     width: 100%;
+     height: 250px;
+     border-radius: 0;
+    }
+    .img-container::after {
+     border-radius: 0;
+    }
+    .title {
+      width: 70%;
+      font-size: 0.8rem; /* smallest for very small screens */
+    }
+     .title2 {
+      font-size: 1rem; /* smallest for very small screens */
+      left:10%;
+    }
+  }
+
+
+
+
+  .squad-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Space between position sections */
+}
+
+/* Position Headers */
+.position-title {
+    font-size: 1.2rem;
+    font-family: 'Sekuya', sans-serif;
+    text-transform: uppercase;
+    
+    margin-bottom: 20px;
+
+}
+
+/* Flexbox Layout for the Cards */
+.player-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    align-items: start;
+    justify-content: center;
+}
+
+/* Individual Player Card */
+.player-card {
+    /* Calculate width for 4 items per row:
+      100% divided by 4, minus the gap space.
+      (3 gaps of 20px = 60px. 60px / 4 items = 15px to subtract per card)
+    */
+    width: calc(25% - 15px); 
+    aspect-ratio: 3 / 4; /* Keeps the cards rectangular */
+    background: linear-gradient(135deg, #232323 30%, #f9f9f9 100%); /* Bayern red gradient */
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    
+    /* Internal Flexbox to align name to bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+/* Card Typography & Elements */
+.player-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 2.2rem;
+    font-weight: 900;
+    z-index: 2;
+}
+
+.player-name {
+    position: absolute;
+    z-index: 2;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Placeholder for where the transparent PNGs would go */
+.player-image-placeholder img{
+  top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    
+}
+
+/* --- Responsive Flex Adjustments --- */
+
+/* 3 Cards per row on medium screens */
+@media (max-width: 1024px) {
+    .player-card {
+        width: calc(33.333% - 13.33px); 
+    }
+}
+
+/* 2 Cards per row on tablets */
+@media (max-width: 768px) {
+    .player-card {
+        width: calc(50% - 10px);
+    }
+}
+
+/* 1 Card per row on small phones */
+@media (max-width: 480px) {
+     .position-title {
+        text-align: center; /* Add some horizontal padding on small screens */ 
+}
+    .player-card {
+        width: 40%;
+    }
+}

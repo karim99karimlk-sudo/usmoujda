@@ -26,7 +26,30 @@
     nav a {
       text-decoration: none;
       color: rgb(255, 255, 255);
+      font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     }
+
+    .hover-underline {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
 
     
     /* ICONS */
@@ -180,6 +203,7 @@
   nav a {
     color: white;
     font-size: 20px;
+    
   }
 
   /* ☰ hidden on desktop already */
