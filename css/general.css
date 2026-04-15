@@ -477,6 +477,7 @@ a{
   color: #000000;
   margin-bottom: 20px;
 }
+
 .history p{
   font-family: serif;
   max-width: 1200px;
@@ -485,6 +486,10 @@ a{
   font-size: 1.4rem;
   text-align: left;
   margin-bottom: 10px;
+}
+  /* Arabic */
+html[dir="rtl"] .history p {
+  text-align: right;
 }
 
 @media screen and (max-width: 768px) {
