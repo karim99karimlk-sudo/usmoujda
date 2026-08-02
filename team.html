@@ -7,46 +7,64 @@
 
   <link rel="shortcut icon" href="USMO IMG/logo/cropped_circle_image.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Oi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@200..1000&family=Oi&display=swap" rel="stylesheet">
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/team.css">
 </head>
 <body>
-  <header id="header">
+  <div class="header-container">
 
-    <div class="logo">
-        <a href="index.html">الإتحاد</a>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
     </div>
 
-    <nav id="nav">
-        <i class="fa-solid fa-xmark" id="close-menu"></i>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">الإتحاد</a>
+        </div>
+         
+        <i class="fa-solid fa-bars menu-btn" id="menu-btn"></i>
 
-        <ul>
-            <li><a href="academy.html">المدرسة</a></li>
-            <li><a href="history.html">التاريخ</a></li>
-            <li><a href="team.html">الفريق</a></li>
-            <li><a href="schedule.html">الجدول</a></li>
-            <li><a href="standings.html">الترتيب</a></li>
-        </ul>
-    </nav>
+        <!-- FIX: Added id="nav" so the JavaScript can find it -->
+        <nav id="nav">
+            <i class="fa-solid fa-xmark close-btn" id="close-btn"></i>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="academy.html">المدرسة</a></li>
+                <li><a href="history.html">التاريخ</a></li>
+                <li><a href="team.html">الفريق</a></li>
+                <li><a href="schedule.html">الجدول</a></li>
+                <li><a href="standings.html">الترتيب</a></li>
+            </ul>
+        </nav>
 
-    <div class="header-icons">
-        <i class="fa-solid fa-bars" id="menu-toggle"></i>
-    </div>
+        <div class="badge">
+            <img src="USMO IMG/logo/cropped_circle_image.png" alt="">
+        </div>
+    </header>
 
-</header>
+</div>
   <body>
     <section class="img-container" style="margin-bottom: 40px;">
           <img class="tm-img" src="USMO IMG/Team/full-squad25-26.jpg" alt="">
-          <div id="title1" class="title">الموسم 2025-2026</div>
+          <div id="title1" class="title">الموسم 2026-2027</div>
           <div id="title2" class="title2">الإتحاد الرياضي الإسلامي الوجدي</div>
     </section>
 
@@ -64,7 +82,7 @@
                             <span class="player-number">1</span>
                             <div class="player-image-placeholder" style="background-image: url('USMO IMG/Team/Aklidou.jpg');"></div>
                             <div class="player-info">
-                                <span class="player-name">Manuel<br>Neuer</span>
+                                <span style="display: none;" class="player-name">Manuel<br>Neuer</span>
                             </div>
                         </div>
                         <div class="player-card-back">
@@ -150,14 +168,14 @@
                     <div class="player-card-inner">
                         <div class="player-card-front">
                             <span class="player-number">2</span>
-                            <div class="player-image-placeholder"></div>
+                            <div class="player-image-placeholder" style="background-image: url('USMO IMG/Team/Hamza Kaaouch.png');"></div>
                             <div class="player-info">
-                                <span class="player-name">Dayot<br>Upamecano</span>
+                                <span class="player-name">Hamza<br>Kaaouch</span>
                             </div>
                         </div>
                         <div class="player-card-back">
                             <div class="player-stats">
-                                <p><span>Age:</span> 25</p>
+                                <p><span>Age:</span> 24</p>
                                 <p><span>Position:</span> CB</p>
                             </div>
                         </div>
@@ -455,10 +473,11 @@
                 <div class="player-card">
                     <div class="player-card-inner">
                         <div class="player-card-front">
-                            <span class="player-number">2</span>
-                            <div class="player-image-placeholder"></div>
+                            <span class="player-number">2</span> 
+                            <div class="player-image-placeholder" style="background-image: url('USMO IMG/Team/coach.jpg') ;">
+                            </div>
                             <div class="player-info">
-                                <span class="player-name">Dayot<br>Upamecano</span>
+                                <span class="player-name">شكيب<br>جيار</span>
                             </div>
                         </div>
                         <div class="player-card-back">
