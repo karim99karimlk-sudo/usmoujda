@@ -1,46 +1,39 @@
-const header = document.getElementById("header");
-const nav = document.getElementById("nav");
-const menuToggle = document.getElementById("menu-toggle");
-const closeMenu = document.getElementById("close-menu");
-
+const topBar = document.querySelector(".top-bar");
 let lastScroll = 0;
 
-// Open menu
-menuToggle.addEventListener("click", (e)=>{
-    e.stopPropagation();
-    nav.classList.add("active");
-});
+// FIX: Instead of hardcoding px values in JS (which breaks responsive design),
+// we toggle a class on the body and let CSS handle the specific padding values via media queries.
+window.addEventListener("scroll", () => {
+    let currentScroll = window.scrollY;
 
-// Close menu
-closeMenu.addEventListener("click",(e)=>{
-    e.stopPropagation();
-    nav.classList.remove("active");
-});
-
-// Click outside
-document.addEventListener("click",(e)=>{
-    if(!nav.contains(e.target) && !menuToggle.contains(e.target)){
-        nav.classList.remove("active");
-    }
-});
-
-// Hide / Show header
-window.addEventListener("scroll",()=>{
-
-    if(nav.classList.contains("active")) return;
-
-    const currentScroll = window.scrollY;
-
-    if(currentScroll <= 0){
-        header.classList.remove("hide");
-        return;
-    }
-
-    if(currentScroll > lastScroll && currentScroll > 80){
-        header.classList.add("hide");
-    }else if(currentScroll < lastScroll){
-        header.classList.remove("hide");
+    if (currentScroll <= 0) {
+        topBar.classList.remove("hide");
+        document.body.classList.remove("scrolled");
+    } else if (currentScroll > lastScroll) {
+        topBar.classList.add("hide");
+        document.body.classList.add("scrolled");
+    } else {
+        topBar.classList.remove("hide");
+        document.body.classList.remove("scrolled");
     }
 
     lastScroll = currentScroll;
+});
+
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-btn");
+const nav = document.getElementById("nav");
+
+menuBtn.onclick = () => {
+    nav.classList.add("active");
+}
+
+closeBtn.onclick = () => {
+    nav.classList.remove("active");
+}
+
+document.querySelectorAll("#nav a").forEach(link => {
+    link.onclick = () => {
+        nav.classList.remove("active");
+    }
 });

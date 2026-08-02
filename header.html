@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Oi&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<title>USMO Header</title>
+
+<style>
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +23,8 @@
 
 body {
     font-family: "Cairo", sans-serif;
-
+    background: #ececec;
+    height: 2000px;
     /* Base padding for desktop (95px header + 35px topbar) */
     padding-top: 130px; 
     transition: padding-top 0.35s ease;
@@ -29,9 +47,9 @@ HEADER CONTAINER
     z-index: 1000;
 }
 
-#menu-btn,
-#close-btn {
-   display: none;
+.menu-btn,
+.close-btn {
+    display: none;
     cursor: pointer;
 }
 
@@ -104,7 +122,6 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 55px;
-    padding-left: 100px;
 }
 
 nav a {
@@ -176,7 +193,7 @@ RESPONSIVE
     }
 
     /* Hamburger */
-    #menu-btn {
+    .menu-btn {
         display: block;
         font-size: 30px;
         color: #000;
@@ -203,7 +220,7 @@ RESPONSIVE
         right: 0;
     }
 
-    #close-btn {
+    .close-btn {
         display: block;
         position: absolute;
         top: 25px;
@@ -225,3 +242,92 @@ RESPONSIVE
     }
 
 }
+</style>
+</head>
+<body>
+
+<div class="header-container">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">الإتحاد</a>
+        </div>
+         
+        <i class="fa-solid fa-bars menu-btn" id="menu-btn"></i>
+
+        <!-- FIX: Added id="nav" so the JavaScript can find it -->
+        <nav id="nav">
+            <i class="fa-solid fa-xmark close-btn" id="close-btn"></i>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="school.html">المدرسة</a></li>
+                <li><a href="history.html">التاريخ</a></li>
+                <li><a href="team.html">الفريق</a></li>
+                <li><a href="schedule.html">الجدول</a></li>
+                <li><a href="ranking.html">الترتيب</a></li>
+            </ul>
+        </nav>
+
+        <div class="badge">
+            <img src="USMO IMG/logo/cropped_circle_image.png" alt="">
+        </div>
+    </header>
+
+</div>
+
+<script>
+const topBar = document.querySelector(".top-bar");
+let lastScroll = 0;
+
+// FIX: Instead of hardcoding px values in JS (which breaks responsive design),
+// we toggle a class on the body and let CSS handle the specific padding values via media queries.
+window.addEventListener("scroll", () => {
+    let currentScroll = window.scrollY;
+
+    if (currentScroll <= 0) {
+        topBar.classList.remove("hide");
+        document.body.classList.remove("scrolled");
+    } else if (currentScroll > lastScroll) {
+        topBar.classList.add("hide");
+        document.body.classList.add("scrolled");
+    } else {
+        topBar.classList.remove("hide");
+        document.body.classList.remove("scrolled");
+    }
+
+    lastScroll = currentScroll;
+});
+
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-btn");
+const nav = document.getElementById("nav");
+
+menuBtn.onclick = () => {
+    nav.classList.add("active");
+}
+
+closeBtn.onclick = () => {
+    nav.classList.remove("active");
+}
+
+document.querySelectorAll("#nav a").forEach(link => {
+    link.onclick = () => {
+        nav.classList.remove("active");
+    }
+});
+</script>
+
+</body>
+</html>

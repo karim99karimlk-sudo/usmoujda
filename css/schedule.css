@@ -1,8 +1,8 @@
 body{
   margin: 0;
-  padding-top: 50px;
-  font-family: '', sans-serif;
-  background-color: #000000;
+  padding-top: 150px;
+  font-family: 'Cairo', sans-serif;
+  background-color: #ffffff;
 
 }
 a{
@@ -20,9 +20,9 @@ a{
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Sekuya', sans-serif;
+  font-family: 'Cairo', sans-serif;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #000000;
 }
 
 
@@ -37,9 +37,10 @@ a{
 
 #seasonSelect{
     padding:10px 16px;
-    border:1px solid #ddd;
-    border-radius:8px;
+    border:1px solid #000000;
+    border-radius:18px;
     font-size:15px;
+    font-family: 'Cairo', sans-serif;
     cursor:pointer;
     background:#000000;
     color: white;
@@ -70,14 +71,14 @@ a{
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    color: #ffffff;
+    color: #000000;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.769) ;
     border-radius: 10px;
 
 }
 
 .schedule-table th {
-    color: #ffffff;
+    color: #000000;
     font-weight: 500;
     padding: 10px;
     text-align: center;
@@ -91,14 +92,14 @@ a{
 }
 
 .alt-row {
-    background-color: #111;
+    background-color: #e1e1e1;
 }
 .schedule-table tbody tr{
     transition:.2s;
 }
 
 .schedule-table tbody tr:hover{
-    background:#222;
+    background:#cbcbcb;
 }
 .left {
    text-align: left;

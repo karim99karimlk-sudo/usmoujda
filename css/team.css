@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-
+  font-family: 'Cairo', sans-serif;
 }
 a{
   text-decoration: none;
@@ -160,21 +160,6 @@ a{
 
 
 
-
-        /* Base Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            padding-top: 80px;
-        }
-
         /* Main Container */
         .squad-container {
             max-width: 1200px;
@@ -266,12 +251,13 @@ a{
         .player-info {
             position: absolute;
             bottom: 10px;
-            left: 10px;
+            left: 20px;
             z-index: 2;
+            text-align: left;
         }
 
         .player-name {
-            font-size: 0.75rem;
+            font-size: 1.75rem;
             font-weight: 600;
             line-height: 1.2;
             display: block;

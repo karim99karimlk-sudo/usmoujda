@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> الموقع غير الرسمي ل الإتحاد الرياضي الإسلامي الوجدي</title>
+  <title> الموقع الرسمي ل الإتحاد الرياضي الإسلامي الوجدي</title>
 
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/general.css">
@@ -11,44 +11,61 @@
 
   <link rel="shortcut icon" href="USMO IMG/logo/cropped_circle_image.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Oi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@200..1000&family=Oi&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 <body>
-<header id="header">
+<div class="header-container">
 
-    <div class="logo">
-        <a href="index.html">الإتحاد</a>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="social-icons">
+            <a target="_blank" href="https://www.facebook.com/USMOUJDAFOOT"><i class="fab fa-facebook-f"></i></a>
+            <a target="_blank" href="https://www.instagram.com/usmoujda/"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@usmotv48"><i class="fab fa-youtube"></i></a>
+            <a target="_blank" href="https://www.tiktok.com/@usmoujda"><i class="fab fa-tiktok"></i></a>
+        </div>
     </div>
 
-    <nav id="nav">
-        <i class="fa-solid fa-xmark" id="close-menu"></i>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">الإتحاد</a>
+        </div>
+         
+        <i class="fa-solid fa-bars menu-btn" id="menu-btn"></i>
 
-        <ul>
-            <li><a href="academy.html">المدرسة</a></li>
-            <li><a href="history.html">التاريخ</a></li>
-            <li><a href="team.html">الفريق</a></li>
-            <li><a href="schedule.html">الجدول</a></li>
-            <li><a href="standings.html">الترتيب</a></li>
-        </ul>
-    </nav>
+        <!-- FIX: Added id="nav" so the JavaScript can find it -->
+        <nav id="nav">
+            <i class="fa-solid fa-xmark close-btn" id="close-btn"></i>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="academy.html">المدرسة</a></li>
+                <li><a href="history.html">التاريخ</a></li>
+                <li><a href="team.html">الفريق</a></li>
+                <li><a href="schedule.html">الجدول</a></li>
+                <li><a href="standings.html">الترتيب</a></li>
+            </ul>
+        </nav>
 
-    <div class="header-icons">
-        <i class="fa-solid fa-bars" id="menu-toggle"></i>
-    </div>
+        <div class="badge">
+            <img src="USMO IMG/logo/cropped_circle_image.png" alt="">
+        </div>
+    </header>
 
-</header>
+</div>
 
   
 <main>
     <div class="img-container" style="margin-bottom: 40px;">
           <img class="tm-img" src="USMO IMG/usmo-casa.jpg" alt="">
-          <div class="title">أهلاً بكم في الموقع الرسمي لـ</div>
           <div class="title2">الإتحاد الرياضي الإسلامي الوجدي</div>
     </div>
 
@@ -58,6 +75,9 @@
         <div class="match-card">
           <div class="h2">المباراة القادمة</div>
           <div class="card">
+            <div class="tournament-logo">
+              <img src="USMO IMG/Icons/botolapro2.svg" alt="">
+            </div> 
             <div class="date"><strong>الدورة --</strong> - 00-00-00</div>
             <div class="teams">
               <div class="team1">
@@ -82,13 +102,16 @@
         <div class="match-card">
           <div class="h2">المباراة الأخيرة</div>
           <div class="card">
+            <div class="tournament-logo">
+              <img src="USMO IMG/Icons/botolapro2.svg" alt="">
+            </div> 
             <div class="date"><strong>الدورة </strong> - 00-00-00 --</div>
             <div class="teams">
               <div class="team1">
                 <img src="USMO IMG/logo/cropped_circle_image.png" alt=""> <br> USMO
               </div>
               <div class="result">
-              --
+              VS
               </div>
               <div class="team2">
                 <img src="USMO IMG/Icons/unknown.team.png" alt=""> <br> --
@@ -109,7 +132,7 @@
     </section>
 
     <section class="standings">
-  <h2>الترتيب</h2>
+  <h2>ترتيب البطولة الإحترافية للقسم الوطني 2</h2>
 
   <div class="table">
     <div class="table-header">
@@ -287,14 +310,13 @@
 
             </div>
 
-              
-   
-  </section>
-    <a style="display: flex; justify-content: center; max-width: 80px; margin: 0 auto; align-items: center;" href="standings.html" class="full-link">الفريق كامل</a>
+   </section>
+
+   <section class="team-link">
+      <a style="display: flex; max-width: fit-content; margin: 0 auto; justify-content: center; align-items: center;" href="team.html" class="full-link">الفريق كامل</a>
+   </section>
 
 </section>
-
-
 
 <section class="history">
   <h2>التاريخ</h2>
@@ -356,6 +378,7 @@
       <p><strong>ياسين</strong> مرزوڭي</p>
       <p><strong>أسامة</strong> الصغيري</p>
       <p><strong>حمزة</strong> قرقور</p>
+      <p><strong></strong>رضوان</strong> المرس</p>
     </div>
 
   </div>
