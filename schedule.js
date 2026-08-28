@@ -1,5 +1,43 @@
 const schedules = {
 
+"26-27":{
+
+
+matches: [
+  ["الدورة 1", "--", "🏠", "MCO", "", "#"],
+  ["الدورة 2", "--", "✈️", "SCCM", "", "#"],
+  ["الدورة 3", "--", "🏠", "OCS", "", "#"],
+  ["الدورة 4", "--", "✈️", "WAF", "", "#"],
+  ["الدورة 5", "--", "🏠", "JSS", "", "#"],
+  ["الدورة 6", "--", "✈️", "KAC", "", "#"],
+  ["الدورة 7", "--", "🏠", "USB", "", "#"],
+  ["الدورة 8", "--", "✈️", "USYM", "", "#"],
+  ["الدورة 9", "--", "🏠", "JSM", "", "#"],
+  ["الدورة 10", "--", "✈️", "OD", "", "#"],
+  ["الدورة 11", "--", "✈️", "CJBG", "", "#"],
+  ["الدورة 12", "--", "🏠", "IZK", "", "#"],
+  ["الدورة 13", "--", "✈️", "SM", "", "#"],
+  ["الدورة 14", "--", "🏠", "CAK", "", "#"],
+  ["الدورة 15", "--", "✈️", "OCK", "", "#"],
+  ["الدورة 16", "--", "✈️", "MCO", "", "#"],
+  ["الدورة 17", "--", "🏠", "SCCM", "", "#"],
+  ["الدورة 18", "--", "✈️", "OCS", "", "#"],
+  ["الدورة 19", "--", "🏠", "WAF", "", "#"],
+  ["الدورة 20", "--", "✈️", "JSS", "", "#"],
+  ["الدورة 21", "--", "🏠", "KAC", "", "#"],
+  ["الدورة 22", "--", "✈️", "USB", "", "#"],
+  ["الدورة 23", "--", "🏠", "USYM", "", "#"],
+  ["الدورة 24", "--", "✈️", "JSM", "", "#"],
+  ["الدورة 25", "--", "🏠", "OD", "", "#"],
+  ["الدورة 26", "--", "🏠", "CJBG", "", "#"],
+  ["الدورة 27", "--", "✈️", "IZK", "", "#"],
+  ["الدورة 28", "--", "🏠", "SM", "", "#"],
+  ["الدورة 29", "--", "✈️", "CAK", "", "#"],
+  ["الدورة 30", "--", "🏠", "OCK", "", "#"]
+]
+
+},
+
 "25-26":{
 
 
@@ -44,24 +82,6 @@ matches:[
 
 },
 
-"24-25":{
-
-
-matches:[
-
-["الدورة 1","15:00 - 24/09/28","✈️","SM","1-1","#"],
-
-["الدورة 2","15:00 - 24/10/04","🏠","KAC","2-1","#"],
-
-["الدورة 2","15:00 - 24/10/04","","KAC","2-1","#"],
-
-["الدورة 2","15:00 - 24/10/04","🏠","KAC","2-1","#"]
-
-// Add all 30 matches
-
-]
-
-}
 
 };
 
@@ -69,24 +89,33 @@ matches:[
 
 const body = document.getElementById("scheduleBody");
 
-function loadSeason(season){
-
+function loadSeason(season) {
     body.innerHTML = "";
 
-    schedules[season].matches.forEach((match,index)=>{
+    if (!schedules[season]) return;
 
-        // Our score is always inside <strong>
-        const us = Number(match[4].match(/<strong>(\d+)<\/strong>/)[1]);
+    schedules[season].matches.forEach((match, index) => {
+        let us = 0;
+        let them = 0;
 
-        // Opponent's score is what's left after removing the <strong> tags
-        const them = Number(
-            match[4]
-                .replace(/<strong>\d+<\/strong>/, "")
-                .replace("-", "")
-        );
+        // Check if strong tags are present
+        const hasStrong = match[4].includes("<strong>");
+
+        if (hasStrong) {
+            us = Number(match[4].match(/<strong>(\d+)<\/strong>/)?.[1] || 0);
+            them = Number(
+                match[4]
+                    .replace(/<strong>\d+<\/strong>/, "")
+                    .replace("-", "")
+            );
+        } else {
+            // Fallback for plain text format "X-Y"
+            const parts = match[4].split("-").map(Number);
+            us = parts[0] || 0;
+            them = parts[1] || 0;
+        }
 
         let resultClass = "draw";
-
         if (us > them) {
             resultClass = "win";
         } else if (us < them) {
@@ -111,10 +140,9 @@ function loadSeason(season){
             </td>
         </tr>`;
     });
-
 }
 
-loadSeason("25-26");
+loadSeason("26-27");
 
 document.getElementById("seasonSelect").addEventListener("change",e=>{
 

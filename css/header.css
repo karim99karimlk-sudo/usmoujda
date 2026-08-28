@@ -6,16 +6,8 @@
 
 body {
     font-family: "Cairo", sans-serif;
-
-    /* Base padding for desktop (95px header + 35px topbar) */
-    padding-top: 130px; 
-    transition: padding-top 0.35s ease;
 }
 
-/* Added class for when scrolling down on desktop */
-body.scrolled {
-    padding-top: 95px;
-}
 
 /*==========================
 HEADER CONTAINER
@@ -35,41 +27,7 @@ HEADER CONTAINER
     cursor: pointer;
 }
 
-/*==========================
-TOP BAR
-==========================*/
 
-.top-bar {
-    height: 35px;
-    background: #000;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 50px;
-    overflow: hidden;
-    transition: height .35s ease, padding .35s ease;
-}
-
-.top-bar.hide {
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.social-icons {
-    display: flex;
-    gap: 18px;
-}
-
-.social-icons a {
-    color: #fff;
-    font-size: 15px;
-    transition: .3s;
-}
-
-.social-icons a:hover {
-    color: #bdbdbd;
-}
 
 /*==========================
 HEADER
@@ -151,20 +109,9 @@ BADGE
 RESPONSIVE
 ==========================*/
 @media(max-width: 900px) {
+   
 
-    body {
-        /* Base padding for mobile (80px header + 35px topbar) */
-        padding-top: 115px;
-    }
-    
-    /* Added class for when scrolling down on mobile */
-    body.scrolled {
-        padding-top: 80px; 
-    }
-
-    .top-bar {
-        padding: 0 20px;
-    }
+   
 
     header {
         height: 80px;

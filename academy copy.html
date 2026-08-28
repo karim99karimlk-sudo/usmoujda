@@ -3,16 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Standings</title>
-
-
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/standings.css">
-  <link rel="stylesheet" href="css/footer.css">
+  <title>Academy</title>
 
   <link rel="shortcut icon" href="USMO IMG/logo/cropped_circle_image.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   
 <!-- Google Fonts -->
@@ -24,10 +18,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/academy.css">
 </head>
 <body>
 <div class="header-container">
-
    
 
     <!-- Header -->
@@ -57,54 +53,12 @@
     </header>
 
 </div>
-<main>
- <section class="standings">
-  <div class="standings-top">
-    <div>
-      <h2>الترتيب</h2>
-      <select id="seasonSelect">
-      <option value="26-27">BOTOLA PRO 2 - 2026/27</option>
-      <option value="25-26">BOTOLA PRO 2 - 2025/26</option>
-      <option value="24-25">BOTOLA PRO 2 - 2024/25</option>
-      <option value="23-24">BOTOLA PRO 2 - 2023/24</option>
-      <option value="22-23">BOTOLA PRO 2 - 2022/23</option>
-      <option value="21-22">BOTOLA PRO 2 - 2021/22</option>
-      <option value="20-21">NATIONAL AMATEUR - 2020/21</option>
-      <option value="19-20">NATIONAL AMATEUR - 2019/20</option>
-      <option value="18-19">NATIONAL AMATEUR - 2018/19</option>
-      <option value="17-18">BOTOLA PRO 2 - 2017/18</option>
-      <option value="16-17">AMATEUR LEAGUE 1 (NORD)- 2016/17</option>
-      <option value="15-16">AMATEUR LEAGUE 1 (NORD)- 2015/16</option>
-
-
-    </select>
-    </div>
-
-    
-  </div>
-
-  <div class="table">
-    <div class="table-header">
-      <span>#</span>
-      <span class="team">الفريق</span>
-      <span>ل</span>
-      <span>ف</span>
-      <span>ت</span>
-      <span>خ</span>
-      <span>ل</span>
-      <span>ع</span>
-      <span>+/-</span>
-      <span>النقاط</span>
-    </div>
-
-    <!-- JS will generate rows here -->
-    <div id="tableBody"></div>
-  </div>
-
-</section>
-</main>
-
-<footer>
+  <main>
+    <section class="hero">
+      <video src="acdemy-video.mp4" autoplay muted loop></video>
+    </section>
+  </main>
+ <footer>
   <div class="players-container">
     
     <div class="keepers">
@@ -171,8 +125,7 @@
     </p>
   </div>
 </footer> 
-
-<script src="standings.js"></script>
+ 
   <script src="header.js"></script>
 
 </body>
