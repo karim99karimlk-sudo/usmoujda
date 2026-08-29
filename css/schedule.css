@@ -1,6 +1,6 @@
 body{
   margin: 0;
-  padding-top: 150px;
+  padding-top: 100px;
   font-family: 'Cairo', sans-serif;
   background-color: #ffffff;
 
@@ -18,7 +18,7 @@ a{
 
 .schedule-container h2{
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   font-family: 'Cairo', sans-serif;
   margin-bottom: 10px;
@@ -38,12 +38,13 @@ a{
 #seasonSelect{
     padding:10px 16px;
     border:1px solid #000000;
-    border-radius:18px;
+    border-radius:30px;
     font-size:15px;
     font-family: 'Cairo', sans-serif;
     cursor:pointer;
     background:#000000;
     color: white;
+    
 }
 
 @media(max-width:768px){
@@ -55,7 +56,11 @@ a{
     }
 
     #seasonSelect{
-        width:180px;
+        width:220px;
+    }
+
+    body{
+     padding-top: 60px; 
     }
 
 }

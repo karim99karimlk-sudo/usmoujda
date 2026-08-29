@@ -4,7 +4,7 @@ const schedules = {
 
 
 matches: [
-  ["الدورة 1", "--", "🏠", "MCO", "", "#"],
+  ["الدورة 1", "--", "🏠", "MCO", "", ],
   ["الدورة 2", "--", "✈️", "SCCM", "", "#"],
   ["الدورة 3", "--", "🏠", "OCS", "", "#"],
   ["الدورة 4", "--", "✈️", "WAF", "", "#"],
@@ -133,11 +133,7 @@ function loadSeason(season) {
                     ${match[4]}
                 </span>
             </td>
-            <td>
-                <a href="${match[5]}" target="_blank" class="info-btn">
-                    <i class="fa-solid fa-play"></i>
-                </a>
-            </td>
+           
         </tr>`;
     });
 }
